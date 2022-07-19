@@ -35,7 +35,7 @@ def 找钱(支付钱,给的钱):
     一百张数,五十张数,二十张数,十张数,五张数,一张数,五毛张数,一毛张数=a
     print(f'一百张数:{一百张数},五十张数:{五十张数},二十张数:{二十张数},十张数:{十张数},五张数:{五张数},一张数:{一张数},五毛张数:{五毛张数},一毛张数:{一毛张数}')
 
-# 找钱(1.3,150)
+# 找钱(33.4,100)
 
 # 4.做个计算器
 def 计算器():
@@ -58,5 +58,49 @@ def 计算器():
                 break
             b.append(a)
 
-计算器()
+# 计算器()
 
+# 5.写I will never spam my friends again 写100次，对每个句子计数，有八次随机输入错误
+from errno import WSAECONNREFUSED
+import random
+def 八次错误():
+    wrong_times = 0
+    str_ = 'I will never spam my friends again'
+    for i in range(1,101):
+        if i % 8 == 0:
+            wrong_times +=1
+            if wrong_times <= 8:
+                print(f'第{i}次：{str_.join(random.sample(str_,3))}')
+            else:
+                print(f'第{i}次：{str_}')
+        print(f'第{i}次：{str_}')
+        
+
+# 八次错误()
+
+# 6.当n大于23，两个人生日相同的可能性大于50%
+def 生日悖论(n):
+    # 生日为365中的一天，可以表示range(364)反向唯一概率为365/365
+    gailv = 1
+    for i in range(n):
+        唯一 =  (365-i)/365
+        gailv *= 唯一
+    print( 1-gailv)
+# 生日悖论(22)
+
+
+# 7.输入空格分隔的单词列表，输出列表每个单词的次数
+#['abc' 'fsafsa' 'wraw' 'wrwarw' 'abc']
+def 次数(list_):
+    str_ = list_[0]
+    review = []
+    for i in range(str_.count(' ')+1):
+        words = str_.split(' ',i+1)[i]
+        if words not in review:
+            print(words,str_.count(words))
+        if str_.count(words) >1:
+            review.append(words)
+
+# 次数(['I I nevvv faf safsa featge wi will never spam my friends again my'])
+
+        

@@ -47,7 +47,7 @@ def 返回是否不同(data):
 
 # 4. 用列表解析语法来产生列表[0,2,6,12,20,30,42,56,72,90]
 def 返回指定表():
-    return [i*(i+1) for i in range(10)]
+    return [i*(i+1) for i in range(100)]
 
 # print(返回指定表())
 
@@ -159,5 +159,5 @@ def novm(v,p):
     c = a ** (1/p)
     return c
 
-print(novm([3,4],2))
+# print(novm([3,4],2))
         
