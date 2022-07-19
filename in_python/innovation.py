@@ -47,7 +47,7 @@ def 返回是否不同(data):
 
 # 4. 用列表解析语法来产生列表[0,2,6,12,20,30,42,56,72,90]
 def 返回指定表():
-    return [i*(i+1) for i in range(10)]
+    return [i*(i+1) for i in range(100)]
 
 # print(返回指定表())
 
@@ -123,5 +123,41 @@ def 条件判断():
         return False
 # print(条件判断())
 
+# 13.产生递增的生成器
+"""
+返回1
+100
+2
+50
+4
+25
+5
+20
+10
+
+"""
+def factor(n):
+    k = 1
+    while k * k <n:
+        if n % k == 0:
+            yield k
+            yield n//k
+            
+        k +=1
+    if k * k ==n:
+        yield k
 
 
+# for i in factor(100):
+#     print(i)
+
+# 14.||v|| = 根号p（v1^p+v2^P....vn^p）
+def novm(v,p):
+    a=0
+    for k in v:
+        a +=k **p
+    c = a ** (1/p)
+    return c
+
+# print(novm([3,4],2))
+        
